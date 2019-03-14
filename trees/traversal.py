@@ -14,6 +14,8 @@ Binary tree example:
 
 """
 
+from bst import sortedArrayToBST
+
 class Node():
 
     def __init__(self, data):
@@ -96,7 +98,6 @@ def printPostorder(root):
         print(root.data)
 
 n1 = Node(1)
-"""
 n1.left = Node(2)
 n1.right = Node(3)
 n1.left.left = Node(4)
@@ -108,7 +109,7 @@ n1.left = Node(2)
 n1.right = Node(3)
 n1.left.left = Node(4)
 n1.left.right = Node(5)
-
+"""
 print('Height = %s' % getTreeHeight(n1))
 printGivenLevel(n1, 3)
 printLevelOrder(n1)
@@ -127,3 +128,8 @@ print('Postorder traversal')
 printPostorder(n1)
 print('Level order traversal')
 printLevelOrder(n1)
+
+root = sortedArrayToBST([1,2,3,4,5,6,7])
+h = getTreeHeight(root)
+print('h = %s' % h)
+printLevelOrder(root)
